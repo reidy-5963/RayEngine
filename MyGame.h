@@ -1,28 +1,17 @@
-#pragma once
-#include "DXCommon.h"
-#include "GameScene.h"
-#include "ImGuiManager.h"
-#include "TextureManager.h"
-#include "DXCManager.h"
-#include "WinApp.h"
+﻿#pragma once
+#include "Framework.h"
 
-class MyGame {
+#include "GameScene.h"
+
+class MyGame : public Framework {
 public:
 	//
-	void Initialize();
-	void Finalize();
-	void Update();
-	void Draw();
+	void Initialize() override;
+	void Finalize() override;
+	void Update() override;
+	void Draw() override;
 
-	bool IsEndRequest() { return endRequest_; }
 private:
 	/*Microsoft::WRL::ComPtr<*/
-	WinApp* winApp_;
-	DirectXCommon* dxCommon_;
-	Input* input_;
 	GameScene* gameScene_;
-	ImGuiManager* imGuiManager_;
-
-	bool endRequest_ = false;
-
 };

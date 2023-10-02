@@ -1,6 +1,5 @@
 #pragma once
 #include "DXCommon.h"
-#include "Input.h"
 #include "Model.h"
 #include "SafeDelete.h"
 #include "Sprite.h"
